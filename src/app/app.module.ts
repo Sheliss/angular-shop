@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FilterComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductCardComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

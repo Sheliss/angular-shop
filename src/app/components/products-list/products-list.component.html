@@ -1,4 +1,11 @@
-<app-filter></app-filter>
-<p>products-list works!</p>
-<button (click)="test()">TEST</button>
-
+<div class="products">
+    <div class="container">
+        <app-filter></app-filter>
+        <button (click)="test()">test</button>
+        <div class="products__inner">
+            <div *ngFor="let item of items | slice: 0:shownItems" class="products__item">
+                <app-product-card [item]="item"></app-product-card>
+            </div>
+        </div>
+    </div>
+</div>

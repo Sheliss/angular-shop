@@ -1,10 +1,16 @@
 .header {
     padding: 10px 0;
+    border-bottom: 1px solid #2A9D8F;
+    margin-bottom: 30px;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #1D3557;
+    color: #2A9D8F;
+
+    h1 {
+        cursor: pointer;
+    }
 }

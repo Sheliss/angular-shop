@@ -20,4 +20,13 @@ export class ShopService {
       }))
 
   }
+
+  getSingleProduct(id: string): Observable<Item> {
+    return this.http
+      .get<Item>(this.apiUri + '/' + id)
+      .pipe(retry(3))
+      .pipe(catchError( _ => {
+        return throwError(() => new Error('Failed to retrieve item'))
+      }))
+  }
 }

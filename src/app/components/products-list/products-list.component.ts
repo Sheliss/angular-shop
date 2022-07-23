@@ -9,6 +9,7 @@ import { Item } from 'src/app/Item';
 })
 export class ProductsListComponent implements OnInit {
   items: Item[] = [];
+  shownItems: number = 8;
   constructor(private shopService: ShopService) { }
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   test() {
-    console.log(this.items)
+    this.shownItems += 8;
   }
 
 }
