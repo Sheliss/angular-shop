@@ -14,7 +14,7 @@ export class ProductPageComponent implements OnInit {
     category: 'No category',
     description: 'No description',
     id: -1,
-    image: 'NULL',
+    image: 'No image',
     price: 0,
     rating: {
       rate: 0,
@@ -27,6 +27,7 @@ export class ProductPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.productId = this.route.snapshot.paramMap.get('id')!;
+    
     this.shopService.getSingleProduct(this.productId).subscribe((item: Item) => (this.item = item));
   }
 

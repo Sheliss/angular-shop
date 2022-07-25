@@ -2,7 +2,8 @@
     <div class="container">
         <div class="product-page__inner">
             <div class="product-page__image">
-                <img src="{{item.image}}" alt="product photo">
+                <img class="fade-in" *ngIf="item.image !== 'No image'" src="{{item.image}}" alt="product photo">
+                <div *ngIf="item.image === 'No image'" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </div>
             <div class="product-page__info">
                 <h2 class="product-page__title">
@@ -14,6 +15,7 @@
                 <div class="product-page__desc">
                     {{item.description}}
                 </div>
+                <button class="product-page__addCart">Add To Cart</button>
             </div>
         </div>
     </div>
