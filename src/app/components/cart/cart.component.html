@@ -1,5 +1,9 @@
-<div *ngIf="showCart" class="cart">
-    <div class="cart__inner">
+<div (click)="closeCart()" *ngIf="showCart" class="cart">
+    <div (click)="$event.stopPropagation()" class="cart__inner">
         TEST
+        <div class="cart__list">
+            <div *ngIf="cart.length === 0" class="cart__empty">Cart is empty</div>
+            <app-cart-item *ngFor="let id of cart" [id]="id"></app-cart-item>
+        </div>
     </div>
 </div>
