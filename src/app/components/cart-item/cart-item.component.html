@@ -1,3 +1,15 @@
-<div>
-    {{id}}
+<div class="cart-item">
+    <div class="cart-item__img">
+        <img src="{{item.image}}" alt="Cart item photo">
+    </div>
+    <div class="cart-item__title">
+        {{item.title}}
+    </div>
+    <div class="cart-item__price">
+        <div>{{cart.amount}}</div>
+        <div>{{item.price * cart.amount}} $</div>  
+    </div>
+    <div class="cart-item__delete">
+        <span (click)="onDelete()" >&#x2715;</span>
+    </div>
 </div>

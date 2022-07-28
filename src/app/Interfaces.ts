@@ -7,3 +7,9 @@ export interface Item {
     rating: Object;
     title: string;
 }
+
+
+export interface Cart {
+    id: number;
+    amount: number;
+}
