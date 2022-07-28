@@ -15,3 +15,21 @@
         border: 1px solid #2A9D8F;
     }
 }
+
+.products__more {
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background: none;
+    border: 1px solid #2A9D8F;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all .1s;
+    color: #2A9D8F;
+
+    &:hover {
+        background: #2A9D8F;
+        color: #fff;
+    }
+}

@@ -1,9 +1,8 @@
 <div class="proudct-page">
     <div class="container">
-        <div class="product-page__inner">
+        <div *ngIf="item.id !== -1" class="product-page__inner">
             <div class="product-page__image">
-                <img class="fade-in" *ngIf="item.image !== 'No image'" src="{{item.image}}" alt="product photo">
-                <div *ngIf="item.image === 'No image'" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <img class="fade-in" src="{{item.image}}" alt="product photo">
             </div>
             <div class="product-page__info">
                 <h2 class="product-page__title">
@@ -17,6 +16,9 @@
                 </div>
                 <button (click)="addToCart()" class="product-page__addCart">Add To Cart</button>
             </div>
+        </div>
+        <div *ngIf="item.id === -1" class="product-page__inner">
+            <div class="lds-spinner loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
     </div>
 </div>

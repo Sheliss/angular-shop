@@ -1,5 +1,11 @@
 .product-page__inner {
     display: flex;
+    height: 500px;
+
+    .loading {
+        margin: 0 auto;
+        align-self: center;
+    }
 }
 
 .product-page__image {

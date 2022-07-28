@@ -16,7 +16,7 @@ export class ProductsListComponent implements OnInit {
    this.shopService.getProducts().subscribe((items: Item[]) => (this.items = items));
   }
 
-  test() {
+  showMore() {
     this.shownItems += 8;
   }
 

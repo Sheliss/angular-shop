@@ -1,5 +1,5 @@
-<div (click)="closeCart()" *ngIf="showCart" class="cart">
-    <div (click)="$event.stopPropagation()" class="cart__inner">
+<div (click)="closeCart()" [ngClass]="showCart ? 'faster-fade-in' : 'closed'" class="cart">
+    <div (click)="$event.stopPropagation()" class="cart__inner" [ngClass]="{'slide-in-right' : showCart}">
         <div class="cart__header cart-header">
             <div class="cart-header__title">
                 Cart

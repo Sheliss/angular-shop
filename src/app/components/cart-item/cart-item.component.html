@@ -1,4 +1,4 @@
-<div class="cart-item">
+<div *ngIf="item.id !== -1" class="cart-item">
     <div class="cart-item__img">
         <img src="{{item.image}}" alt="Cart item photo">
     </div>
@@ -7,9 +7,12 @@
     </div>
     <div class="cart-item__price">
         <div>{{cart.amount}}</div>
-        <div>{{item.price * cart.amount}} $</div>  
+        <div>{{(item.price * cart.amount).toFixed(2)}} $</div>  
     </div>
     <div class="cart-item__delete">
         <span (click)="onDelete()" >&#x2715;</span>
     </div>
+</div>
+<div *ngIf="item.id === -1" class="cart-item">
+    <div class="lds-spinner loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>

@@ -1,11 +1,11 @@
 <div class="products">
     <div class="container">
         <app-filter></app-filter>
-        <button (click)="test()">test</button>
         <div class="products__inner">
-            <div *ngFor="let item of items | slice: 0:shownItems" class="products__item">
+            <div *ngFor="let item of items | slice: 0:shownItems" class="products__item fade-in">
                 <app-product-card [item]="item"></app-product-card>
             </div>
         </div>
+        <button *ngIf="shownItems <= items.length" (click)="showMore()" class="products__more">Show more</button>
     </div>
 </div>
