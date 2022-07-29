@@ -5,11 +5,11 @@
                 Category:
             </div>
             <div class="filter__menu">
-                <button class="filter__btn">All</button>
-                <button class="filter__btn">Men's clothing</button>
-                <button class="filter__btn">Women's clothing</button>
-                <button class="filter__btn">Jewelry</button>
-                <button class="filter__btn">Electronics</button>
+                <button (click)="onFilterClick('all')" class="filter__btn">All</button>
+                <button (click)="onFilterClick('men')" class="filter__btn">Men's clothing</button>
+                <button (click)="onFilterClick('women')" class="filter__btn">Women's clothing</button>
+                <button (click)="onFilterClick('jewel')" class="filter__btn">Jewelry</button>
+                <button (click)="onFilterClick('electro')" class="filter__btn">Electronics</button>
             </div>
         </div>
     </div>
