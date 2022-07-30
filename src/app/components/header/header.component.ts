@@ -21,4 +21,8 @@ export class HeaderComponent implements OnInit {
   openCart() {
     this.uiService.openCart();
   }
+
+  goToAbout() {
+    this.router.navigateByUrl('about');
+  }
 }

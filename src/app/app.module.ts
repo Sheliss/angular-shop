@@ -12,6 +12,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     ProductCardComponent,
     ProductPageComponent,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
