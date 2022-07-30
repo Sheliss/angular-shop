@@ -4,3 +4,39 @@
     justify-content: center;
     text-align: center;
 }
+
+.filter__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.filter__menu {
+    margin-bottom: 20px;
+}
+
+.filter__btn {
+    background: 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 10px;
+    width: 160px;
+    border: 1px solid #2A9D8F;
+    margin-right: 5px;
+    transition: all .1s;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-color: #2A9D8F;
+        color: #fff;
+    }
+
+    &--active {
+        background-color: #2A9D8F;
+        color: #fff;
+    }
+}

@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
   @Output() filterClick = new EventEmitter();
+  whatActive: string = 'all';
 
   constructor() { }
 
@@ -15,6 +16,7 @@ export class FilterComponent implements OnInit {
 
   onFilterClick(data: string) {
     this.filterClick.emit(data);
+    this.whatActive = data;
   }
 
 }
